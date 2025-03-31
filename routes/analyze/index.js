@@ -3,7 +3,6 @@
 const { GoogleGenAI } = require("@google/genai");
 const fs = require("fs");
 const path = require("path");
-const formHandler = require("./form");
 
 const PROMPT = `
 Given a photo, you will return JSON with some of the relevant nutrition facts pictured, if a nutrition facts label is shown in the photo. You will respond in only valid JSON with this format:
@@ -32,11 +31,8 @@ module.exports = async function (fastify, opts) {
     },
   });
 
-  // Register the form handler for the root route
-  formHandler(fastify);
-
   // POST endpoint to analyze image
-  fastify.post("/analyze", async function (request, reply) {
+  fastify.post("/", async function (request, reply) {
     try {
       let imageBuffer;
       let mimeType = "image/jpeg";
