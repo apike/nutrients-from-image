@@ -6,14 +6,15 @@ const { build } = require("../helper");
 const fs = require("fs");
 const path = require("path");
 
-test("example is loaded", async (t) => {
+test("test route is loaded", async (t) => {
   const app = await build(t);
 
   const res = await app.inject({
-    url: "/example",
+    url: "/test",
   });
-  // Expecting a response from Gemini
+  // Expecting a valid HTML response
   assert.ok(res.statusCode === 200);
+  assert.ok(res.headers["content-type"].includes("text/html"));
 });
 
 test("analyze nutrition facts from image", async (t) => {
@@ -43,7 +44,7 @@ test("analyze nutrition facts from image", async (t) => {
   // POST the multipart form to the analyze endpoint
   const res = await app.inject({
     method: "POST",
-    url: "/example/analyze",
+    url: "/analyze",
     payload: multipartPayload,
     headers: {
       "content-type": `multipart/form-data; boundary=${boundary}`,
