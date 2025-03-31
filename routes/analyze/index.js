@@ -27,7 +27,7 @@ module.exports = async function (fastify, opts) {
   // Register multipart support for file uploads with limits
   fastify.register(require("@fastify/multipart"), {
     limits: {
-      fileSize: 10 * 1024 * 1024, // 10MB limit for original files
+      fileSize: 1 * 1024 * 1024, // 1MB limit for original files
     },
   });
 
@@ -125,6 +125,16 @@ module.exports = async function (fastify, opts) {
       }
     } catch (error) {
       console.error("Error:", error);
+
+      // Check if this is a file size error and return the appropriate status code
+      if (error.code === "FST_REQ_FILE_TOO_LARGE") {
+        reply.code(413);
+        return {
+          error: "File too large: Maximum file size is 1MB",
+          nutrition_label_found: "false",
+        };
+      }
+
       return {
         error: "Failed to process image: " + error.message,
         nutrition_label_found: "false",
