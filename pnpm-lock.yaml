@@ -20,6 +20,9 @@ importers:
       '@google/genai':
         specifier: ^0.7.0
         version: 0.7.0
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.7
       fastify:
         specifier: ^5.0.0
         version: 5.2.2
