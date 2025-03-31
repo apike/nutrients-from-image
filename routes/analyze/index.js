@@ -17,7 +17,7 @@ Given a photo, you will return JSON with some of the relevant nutrition facts pi
 	"total_sugar_grams": 13,
 	"protein_grams": 3,
 	"percent_whole_fruit_or_veg_guess": 0,
-	"guessed_packaged_food_name": "Kashi Snack Bar"
+	"guessed_packaged_food_name": "Snack Bar"
 }
 `;
 
