@@ -21,7 +21,10 @@
     "@google/genai": "^0.7.0",
     "fastify": "^5.0.0",
     "fastify-cli": "^7.4.0",
-    "fastify-plugin": "^5.0.0"
+    "fastify-plugin": "^5.0.0",
+    "heic-to": "^1.1.10",
+    "heic2any": "^0.0.4",
+    "libheif-js": "^1.18.2"
   },
   "devDependencies": {
     "formdata-node": "^6.0.3"

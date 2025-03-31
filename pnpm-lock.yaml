@@ -29,6 +29,15 @@ importers:
       fastify-plugin:
         specifier: ^5.0.0
         version: 5.0.1
+      heic-to:
+        specifier: ^1.1.10
+        version: 1.1.10
+      heic2any:
+        specifier: ^0.0.4
+        version: 0.0.4
+      libheif-js:
+        specifier: ^1.18.2
+        version: 1.18.2
     devDependencies:
       formdata-node:
         specifier: ^6.0.3
@@ -258,6 +267,12 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
+  heic-to@1.1.10:
+    resolution: {integrity: sha512-Zdfk+gu+2zgv3Kn+MOcSVI0Ady+rxgfGD5ldwZdGq208rVBOVLw+xsgTz69niJUIeQKRLRyjC6aDRp5U0+pb2Q==}
+
+  heic2any@0.0.4:
+    resolution: {integrity: sha512-3lLnZiDELfabVH87htnRolZ2iehX9zwpRyGNz22GKXIu0fznlblf0/ftppXKNqS26dqFSeqfIBhAmAj/uSp0cA==}
+
   help-me@5.0.0:
     resolution: {integrity: sha512-7xgomUX6ADmcYzFik0HzAxh/73YlKR9bmFzf51CZwR+b6YtzU2m0u49hQCqV6SvlqIqsaxovfwdvbnsw3b/zpg==}
 
@@ -307,6 +322,10 @@ packages:
 
   jws@4.0.0:
     resolution: {integrity: sha512-KDncfTmOZoOMTFG4mBlG0qUIOlc03fmzH+ru6RgYVZhPkyiy/92Owlt/8UEN+a4TXR1FQetfIpJE8ApdvdVxTg==}
+
+  libheif-js@1.18.2:
+    resolution: {integrity: sha512-4Nk0dKhhRfVS4mECcX2jSDpNU6gcHQLneJjkGQq61N8COGtjSpSA3CI+1Q3kUYv5Vf+SwIqUtaDSdU6JO37c6w==}
+    engines: {node: '>=8.0.0'}
 
   light-my-request@6.6.0:
     resolution: {integrity: sha512-CHYbu8RtboSIoVsHZ6Ye4cj4Aw/yg2oAFimlF7mNvfDV192LR7nDiKtSIfCuLT7KokPSTn/9kfVLm5OGN0A28A==}
@@ -809,6 +828,10 @@ snapshots:
 
   has-flag@4.0.0: {}
 
+  heic-to@1.1.10: {}
+
+  heic2any@0.0.4: {}
+
   help-me@5.0.0: {}
 
   http-errors@2.0.0:
@@ -858,6 +881,8 @@ snapshots:
     dependencies:
       jwa: 2.0.0
       safe-buffer: 5.2.1
+
+  libheif-js@1.18.2: {}
 
   light-my-request@6.6.0:
     dependencies:
